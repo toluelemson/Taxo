@@ -8,7 +8,7 @@ defmodule TaksoWeb.Router do
     plug :put_root_layout, {TaksoWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug Takso.Authentication
+    plug Takso.Authentication, repo: Takso.Repo
   end
 
   pipeline :api do
