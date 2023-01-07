@@ -18,7 +18,7 @@ config :takso, Takso.Repo,
 config :takso, TaksoWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "EhmdcR6vflH7yAk5sSMVqPHBEOKEfnp/YOI/UTcXzCset3ahmXriu4KccmAysFao",
-  server: false
+  server: true
 
 # In test we don't send emails.
 config :takso, Takso.Mailer, adapter: Swoosh.Adapters.Test
@@ -28,3 +28,7 @@ config :logger, level: :warn
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# Add the following lines at the end of the file
+config :hound, driver: "chrome_driver"
+config :takso, sql_sandbox: true
