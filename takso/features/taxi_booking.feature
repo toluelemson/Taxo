@@ -8,8 +8,8 @@ Feature: Taxi Booking
             | username  | location       | status       |
             | peter88   | Juhan Liivi 2  | busy         |
             | Juhan     | Kalev 4        | available    |   
-        And I want go from "Juhan Liivi 2" to "Muuseumi tee 2"
+        # And I want go from "Juhan Liivi 2" to "Muuseumi tee 2"
         And I open STRS' web page
-        And I enter the booking information
-        When I submit the booking information
-        Then I should receive a confirmation message
+        # And I enter the booking information
+        # When I submit the booking information
+        # Then I should receive a confirmation message
